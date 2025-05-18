@@ -48,7 +48,7 @@ export default function Page() {
             <h1 className="text-[#073379] text-2xl font-bold mb-3">From Concept to Completion</h1>
             <p className="text-sm text-gray-700 max-w-xl mx-auto">
               From residential homes and commercial spaces to intricate renovations and custom builds,
-              we deliver exceptional results that meet and exceed our clients' expectations.
+              we deliver exceptional results that meet and exceed our clients&apos; expectations.
             </p>
           </div>
         </section>
