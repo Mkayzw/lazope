@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Contact | Lazope Construction",
+  description: "Get in touch with Lazope Construction for quality building services in Zimbabwe.",
+};
+
+export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header/Navigation - Updated for mobile responsiveness */}
@@ -25,80 +31,80 @@ export default function Home() {
         </div>
       </header>
       
-      {/* Hero Section */}
-      <section className="w-full py-10 md:py-16 bg-gray-200 text-center">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-[#073379] mb-4">Expert Construction and Renovation Services</h1>
-          <p className="text-lg text-gray-700 mb-8">We bring your construction dreams to life, both big and small.</p>
-          <Link href="/projects" className="btn-primary">
-            View Projects
-          </Link>
-        </div>
-      </section>
-      
-      {/* Mission and Promises Section */}
-      <section className="w-full py-16 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Our Promises */}
-          <div className="flex flex-col">
-            <div className="relative h-64 rounded-lg overflow-hidden mb-6">
-              <Image
-                src="/assets/constructionrig.jpg"
-                alt="Construction Site"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <h2 className="text-2xl font-bold heading-primary mb-4 text-center">Our Promises</h2>
-            <ul className="space-y-4">
-              <li>
-                <p className="heading-primary font-semibold">Quality First</p>
-                <p className="text-gray-700">We deliver durable, high-standard workmanship on every project, big or small.</p>
-              </li>
-              <li>
-                <p className="heading-primary font-semibold">On-Time Delivery</p>
-                <p className="text-gray-700">We respect your time and strive to meet all project deadlines without compromising quality.</p>
-              </li>
-              <li>
-                <p className="heading-primary font-semibold">Transparent Communication</p>
-                <p className="text-gray-700">We keep our clients informed at every stage, building trust through honesty and clarity.</p>
-              </li>
-              <li>
-                <p className="heading-primary font-semibold">Client Satisfaction</p>
-                <p className="text-gray-700">We&apos;re not done until you&apos;re satisfied — your vision is our priority.</p>
-              </li>
-            </ul>
+      {/* Contact Form Section */}
+      <main className="flex-grow bg-gray-200">
+        <div className="max-w-4xl mx-auto py-10 md:py-16 px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold text-[#073379] mb-4">Let&apos;s Build Something Great Together</h1>
+            <p className="text-lg md:text-xl text-[#6b21a8]">
+              Contact us today and let&apos;s start building something extraordinary together.
+            </p>
           </div>
           
-          {/* Our Values */}
-          <div className="flex flex-col">
-            <h2 className="text-2xl font-bold heading-primary mb-4 text-center">Our Values</h2>
-            <p className="text-gray-700 text-center mb-6">
-              To deliver high-quality, innovative, and sustainable construction solutions that meet the needs of our clients while upholding the highest standards of integrity, professionalism, and reliability in every project we undertake, big and small.
-            </p>
-            <div className="relative h-64 rounded-lg overflow-hidden">
-              <Image
-                src="/assets/helmet.jpg"
-                alt="Construction Helmet"
-                fill
-                className="object-cover"
-              />
+          <form className="max-w-xl mx-auto space-y-6 md:space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              {/* First Name */}
+              <div>
+                <input 
+                  type="text" 
+                  placeholder="*First Name" 
+                  className="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none" 
+                  required 
+                />
+              </div>
+              
+              {/* Surname */}
+              <div>
+                <input 
+                  type="text" 
+                  placeholder="*Surname" 
+                  className="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none" 
+                  required 
+                />
+              </div>
+              
+              {/* Email */}
+              <div>
+                <input 
+                  type="email" 
+                  placeholder="*Email" 
+                  className="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none" 
+                  required 
+                />
+              </div>
+              
+              {/* Phone Number */}
+              <div>
+                <input 
+                  type="tel" 
+                  placeholder="*Phone Number" 
+                  className="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none" 
+                  required 
+                />
+              </div>
             </div>
-          </div>
+            
+            {/* Message */}
+            <div>
+              <textarea 
+                placeholder="*Message" 
+                className="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none h-40" 
+                required
+              ></textarea>
+            </div>
+            
+            {/* Submit Button */}
+            <div className="flex justify-center mt-4">
+              <button 
+                type="submit" 
+                className="px-16 py-2 bg-transparent text-[#6b21a8] font-medium border border-[#6b21a8] rounded hover:bg-[#6b21a8] hover:text-white transition duration-300"
+              >
+                Send
+              </button>
+            </div>
+          </form>
         </div>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="w-full py-12 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <Link href="/contact" className="btn-primary">
-            Get a Quote
-          </Link>
-          <p className="mt-4 text-gray-600">
-            Request a quote on any prospective projects
-          </p>
-        </div>
-      </section>
+      </main>
       
       {/* Footer */}
       <footer className="w-full py-8 px-4 md:px-8 bg-[#073379] text-white mt-auto">
@@ -149,4 +155,4 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+} 

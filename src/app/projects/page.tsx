@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header/Navigation */}
-      <header className="w-full py-4 px-8 flex items-center justify-between bg-white border-b border-gray-100">
-        <div className="flex items-center">
+      {/* Header/Navigation - Updated for mobile responsiveness */}
+      <header className="w-full py-4 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between bg-white border-b border-gray-100">
+        <div className="flex items-center mb-4 md:mb-0">
           <Image 
             src="/assets/LogowithText.jpg" 
             alt="Lazope Construction Logo" 
@@ -21,20 +21,20 @@ export default function Page() {
             className="object-contain"
           />
         </div>
-        <nav className="absolute left-1/2 transform -translate-x-1/2 flex space-x-12">
+        <nav className="flex space-x-6 md:space-x-12 my-3 md:my-0">
           <Link href="/" className="text-[#073379] font-medium text-base hover:text-blue-600">Home</Link>
           <Link href="/projects" className="text-[#073379] font-medium text-base hover:text-blue-600">Projects</Link>
           <Link href="/contact" className="text-[#073379] font-medium text-base hover:text-blue-600">Contact</Link>
         </nav>
-        <div className="w-[180px]">
-          {/* Empty div to balance the layout */}
+        <div className="hidden md:block w-[180px]">
+          {/* Empty div to balance the layout on desktop */}
         </div>
       </header>
       
       {/* Projects Showcase */}
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="w-full bg-gray-200 py-10 text-center">
+        <section className="w-full bg-gray-200 py-8 md:py-10 text-center">
           <div className="max-w-6xl mx-auto px-4">
             <div className="bg-white rounded-lg overflow-hidden mb-6 max-w-3xl mx-auto">
               <Image
@@ -42,10 +42,10 @@ export default function Page() {
                 alt="Modern Architecture"
                 width={800}
                 height={400}
-                className="w-full object-cover h-[250px]"
+                className="w-full object-cover h-[200px] md:h-[250px]"
               />
             </div>
-            <h1 className="text-[#073379] text-2xl font-bold mb-3">From Concept to Completion</h1>
+            <h1 className="text-[#073379] text-xl md:text-2xl font-bold mb-3">From Concept to Completion</h1>
             <p className="text-sm text-gray-700 max-w-xl mx-auto">
               From residential homes and commercial spaces to intricate renovations and custom builds,
               we deliver exceptional results that meet and exceed our clients&apos; expectations.
@@ -54,25 +54,25 @@ export default function Page() {
         </section>
         
         {/* Services Showcase */}
-        <section className="w-full py-8 px-4">
+        <section className="w-full py-6 md:py-8 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-[#073379] text-xl font-bold text-center mb-8">High quality exterior and superstructure work.</h2>
-            <hr className="border-gray-300 mb-8" />
+            <h2 className="text-[#073379] text-lg md:text-xl font-bold text-center mb-6 md:mb-8">High quality exterior and superstructure work.</h2>
+            <hr className="border-gray-300 mb-6 md:mb-8" />
             
             {/* Exoskeletons Section */}
-            <div className="flex flex-col md:flex-row items-center mb-12">
+            <div className="flex flex-col md:flex-row items-center mb-8 md:mb-12">
               <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
                 <Image
                   src="/assets/exoskel.jpg"
                   alt="Exterior Construction"
                   width={500}
                   height={350}
-                  className="rounded-lg w-full object-cover h-[250px]"
+                  className="rounded-lg w-full object-cover h-[200px] md:h-[250px]"
                 />
               </div>
               <div className="md:w-1/2 flex flex-col items-center md:items-start">
-                <h3 className="text-[#073379] text-lg font-bold mb-2">Exceptional exoskeletons</h3>
-                <p className="text-purple-600 text-sm mb-4">
+                <h3 className="text-[#073379] text-lg font-bold mb-2 mt-2 md:mt-0">Exceptional exoskeletons</h3>
+                <p className="text-purple-600 text-sm mb-4 text-center md:text-left">
                   High-quality superstructure work and exterior plaster work.
                 </p>
               </div>
@@ -86,12 +86,12 @@ export default function Page() {
                   alt="Interior Work"
                   width={500}
                   height={350}
-                  className="rounded-lg w-full object-cover h-[250px]"
+                  className="rounded-lg w-full object-cover h-[200px] md:h-[250px]"
                 />
               </div>
               <div className="md:w-1/2 flex flex-col items-center md:items-end">
-                <h3 className="text-[#073379] text-lg font-bold mb-2">Excellent Interior work</h3>
-                <p className="text-purple-600 text-sm mb-4">
+                <h3 className="text-[#073379] text-lg font-bold mb-2 mt-2 md:mt-0">Excellent Interior work</h3>
+                <p className="text-purple-600 text-sm mb-4 text-center md:text-right">
                   High integrity builds and interior work towards completion
                 </p>
               </div>
@@ -99,103 +99,18 @@ export default function Page() {
           </div>
         </section>
         
-        {/* Renovation Projects Section */}
-        <section className="w-full py-8 px-4 bg-gray-100">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-[#073379] text-xl font-bold text-center mb-10">Some of our renovation projects and their results.</h2>
-            
-            <div className="flex flex-wrap justify-center gap-5 mb-8">
-              {/* Before - Left Side */}
-              <div className="relative w-[280px]">
-                <Image
-                  src="/assets/before.jpg"
-                  alt="Kitchen Renovation Before"
-                  width={280}
-                  height={240}
-                  className="rounded-lg shadow-sm object-cover h-[240px]"
-                />
-                <p className="text-[#073379] font-medium text-center mt-2">Before...</p>
-              </div>
-              
-              {/* Center Image (Larger) */}
-              <div className="w-[300px]">
-                <Image
-                  src="/assets/after.jpg"
-                  alt="Kitchen Renovation Progress"
-                  width={300}
-                  height={260}
-                  className="rounded-lg shadow-sm object-cover h-[260px]"
-                />
-              </div>
-              
-              {/* After - Right Side */}
-              <div className="relative w-[280px]">
-                <Image
-                  src="/assets/after2.jpg"
-                  alt="Kitchen Renovation After"
-                  width={280}
-                  height={240}
-                  className="rounded-lg shadow-sm object-cover h-[240px]"
-                />
-                <p className="text-[#073379] font-medium text-center mt-2">After...</p>
-              </div>
-            </div>
-            
-            {/* Second Row of Interior Work */}
-            <div className="flex flex-wrap justify-center gap-5 mb-8">
-              {/* Left Side */}
-              <div className="w-[280px]">
-                <Image
-                  src="/assets/insidework1.jpg"
-                  alt="Interior Renovation"
-                  width={280} 
-                  height={240}
-                  className="rounded-lg shadow-sm object-cover h-[240px]"
-                />
-              </div>
-              
-              {/* Center Image (Larger) */}
-              <div className="w-[300px]">
-                <Image
-                  src="/assets/insidework3.jpg"
-                  alt="Interior Renovation with Green Curtain"
-                  width={300}
-                  height={260}
-                  className="rounded-lg shadow-sm object-cover h-[260px]"
-                />
-                <p className="text-purple-600 font-medium text-center mt-2">The Gift that keeps on giving...</p>
-              </div>
-              
-              {/* Right Side */}
-              <div className="w-[280px]">
-                <Image
-                  src="/assets/insidework2.jpg"
-                  alt="Interior Renovation"
-                  width={280}
-                  height={240}
-                  className="rounded-lg shadow-sm object-cover h-[240px]"
-                />
-              </div>
-            </div>
-            
-            <div className="text-center mt-12">
-              <Link href="/contact" className="bg-[#073379] text-white px-6 py-2 rounded-md font-medium hover:bg-blue-800 transition duration-300">
-                Request a Quote
-              </Link>
-            </div>
-          </div>
-        </section>
+                {/* Renovation Projects Section */}        <section className="w-full py-6 md:py-8 px-4 bg-gray-100">          <div className="max-w-6xl mx-auto">            <h2 className="text-[#073379] text-lg md:text-xl font-bold text-center mb-6 md:mb-10">Some of our renovation projects and their results.</h2>                        <div className="flex flex-wrap justify-center gap-3 md:gap-5 mb-6 md:mb-8">              {/* Before - Left Side */}              <div className="relative w-[250px] md:w-[280px]">                <Image                  src="/assets/before.jpg"                  alt="Kitchen Renovation Before"                  width={280}                  height={240}                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"                />                <p className="text-[#073379] font-medium text-center mt-2">Before...</p>              </div>                            {/* Center Image (Larger) */}              <div className="w-[270px] md:w-[300px]">                <Image                  src="/assets/after.jpg"                  alt="Kitchen Renovation Progress"                  width={300}                  height={260}                  className="rounded-lg shadow-sm object-cover h-[220px] md:h-[260px]"                />              </div>                            {/* After - Right Side */}              <div className="relative w-[250px] md:w-[280px]">                <Image                  src="/assets/after2.jpg"                  alt="Kitchen Renovation After"                  width={280}                  height={240}                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"                />                <p className="text-[#073379] font-medium text-center mt-2">After...</p>              </div>            </div>                        {/* Second Row of Interior Work */}            <div className="flex flex-wrap justify-center gap-3 md:gap-5 mb-6 md:mb-8">              {/* Left Side */}              <div className="w-[250px] md:w-[280px]">                <Image                  src="/assets/insidework1.jpg"                  alt="Interior Renovation"                  width={280}                   height={240}                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"                />              </div>                            {/* Center Image (Larger) */}              <div className="w-[270px] md:w-[300px]">                <Image                  src="/assets/insidework3.jpg"                  alt="Interior Renovation with Green Curtain"                  width={300}                  height={260}                  className="rounded-lg shadow-sm object-cover h-[220px] md:h-[260px]"                />                <p className="text-purple-600 font-medium text-center mt-2">The Gift that keeps on giving...</p>              </div>                            {/* Right Side */}              <div className="w-[250px] md:w-[280px]">                <Image                  src="/assets/insidework2.jpg"                  alt="Interior Renovation"                  width={280}                  height={240}                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"                />              </div>            </div>                        <div className="text-center mt-8 md:mt-12">              <Link href="/contact" className="bg-[#073379] text-white px-6 py-2 rounded-md font-medium hover:bg-blue-800 transition duration-300">                Request a Quote              </Link>            </div>          </div>        </section>
       </main>
       
       {/* Footer */}
-      <footer className="w-full py-8 px-8 bg-[#073379] text-white mt-auto">
+      <footer className="w-full py-8 px-4 md:px-8 bg-[#073379] text-white mt-auto">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Reach us on:</h3>
-            <p className="mb-2">Our whats app business line: <span className="font-semibold">+263 78 608 9168</span></p>
-            <p className="mb-2">Email: <span className="font-semibold">Lazopeconstruction@gmail.com</span></p>
-            <p className="mb-2">Open Hours: Mon – Fri: 8:00am – 05:00pm</p>
-            <p>Saturdays: 9:00am – 1:00pm</p>
+            <p className="mb-2 text-center md:text-left">Our whats app business line: <span className="font-semibold">+263 78 608 9168</span></p>
+            <p className="mb-2 text-center md:text-left">Email: <span className="font-semibold">Lazopeconstruction@gmail.com</span></p>
+            <p className="mb-2 text-center md:text-left">Open Hours: Mon – Fri: 8:00am – 05:00pm</p>
+            <p className="text-center md:text-left">Saturdays: 9:00am – 1:00pm</p>
           </div>
           <div className="flex flex-col items-center md:items-end">
             <h3 className="text-xl font-semibold mb-4 text-center md:text-right">About</h3>
