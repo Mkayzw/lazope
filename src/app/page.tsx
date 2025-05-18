@@ -65,7 +65,7 @@ export default function Home() {
               </li>
               <li>
                 <p className="text-[#073379] font-semibold">Client Satisfaction</p>
-                <p className="text-gray-700">We're not done until you're satisfied — your vision is our priority.</p>
+                <p className="text-gray-700">We&apos;re not done until you&apos;re satisfied — your vision is our priority.</p>
               </li>
             </ul>
           </div>
