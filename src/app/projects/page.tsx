@@ -38,7 +38,7 @@ export default function Page() {
           <div className="max-w-6xl mx-auto px-4">
             <div className="bg-white rounded-lg overflow-hidden mb-6 max-w-3xl mx-auto">
               <Image
-                src="/assets/constructionrig.jpg"
+                src="/assets/from.jpg"
                 alt="Modern Architecture"
                 width={800}
                 height={400}
