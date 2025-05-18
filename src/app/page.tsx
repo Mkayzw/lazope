@@ -28,7 +28,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="w-full py-16 bg-gray-200 text-center">
         <div className="max-w-3xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-[#073379] mb-4">Expert Construction and Renovation Services</h1>
+          <h1 className="text-5xl md:text-6xl font-extrabold text-[#073379] mb-4">Expert Construction and Renovation Services</h1>
           <p className="text-lg text-gray-700 mb-8">We bring your construction dreams to life, both big and small.</p>
           <Link href="/projects" className="bg-white text-[#073379] px-6 py-2 rounded-md font-medium hover:bg-gray-50 transition duration-300">
             View Projects
