@@ -101,19 +101,19 @@ export default function Home() {
       </section>
       
       {/* Footer */}
-      <footer className="w-full py-12 px-8 bg-[#073379] text-white mt-auto">
+      <footer className="w-full py-8 px-8 bg-[#073379] text-white mt-auto">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Reach us on:</h3>
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Reach us on:</h3>
             <p className="mb-2">Our whats app business line: <span className="font-semibold">+263 78 608 9168</span></p>
             <p className="mb-2">Email: <span className="font-semibold">Lazopeconstruction@gmail.com</span></p>
             <p className="mb-2">Open Hours: Mon – Fri: 8:00am – 05:00pm</p>
-            <p>Saturday: 9:00am – 1:00pm</p>
+            <p>Saturdays: 9:00am – 1:00pm</p>
           </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4">About</h3>
-            <p>
-              We are an up and coming construction company in Zimbabwe specializing in construction/renovation, electrical, plumbing, and mechanical engineering services.
+          <div className="flex flex-col items-center md:items-end">
+            <h3 className="text-xl font-semibold mb-4 text-center md:text-right">About</h3>
+            <p className="text-center md:text-right max-w-md">
+              We are an up and coming construction company in Zimbabwe that provides basic construction/renovation, electrical, plumbing, and mechanical engineering services.
             </p>
           </div>
         </div>
@@ -122,9 +122,9 @@ export default function Home() {
             <Image 
               src="/assets/LogowithText.jpg" 
               alt="Lazope Construction Logo" 
-              width={100} 
-              height={40}
-              className="object-contain bg-white p-2 rounded"
+              width={80} 
+              height={30}
+              className="object-contain bg-white p-1 rounded"
             />
           </div>
           <p className="text-sm">© 2025. All Rights Reserved.</p>
