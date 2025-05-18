@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function Projects() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header/Navigation */}
@@ -25,80 +25,117 @@ export default function Home() {
         </div>
       </header>
       
-      {/* Hero Section */}
-      <section className="w-full py-16 bg-gray-200 text-center">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-[#073379] mb-4">Expert Construction and Renovation Services</h1>
-          <p className="text-lg text-gray-700 mb-8">We bring your construction dreams to life, both big and small.</p>
-          <Link href="/projects" className="btn-primary">
-            View Projects
-          </Link>
-        </div>
-      </section>
-      
-      {/* Mission and Promises Section */}
-      <section className="w-full py-16 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Our Promises */}
-          <div className="flex flex-col">
-            <div className="relative h-64 rounded-lg overflow-hidden mb-6">
+      {/* Projects Showcase */}
+      <main className="flex-grow">
+        {/* Hero Section */}
+        <section className="w-full bg-gray-200 py-10 text-center">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="bg-white rounded-lg overflow-hidden mb-6 max-w-3xl mx-auto">
               <Image
                 src="/assets/constructionrig.jpg"
-                alt="Construction Site"
-                fill
-                className="object-cover"
+                alt="Modern Architecture"
+                width={800}
+                height={400}
+                className="w-full object-cover h-[250px]"
               />
             </div>
-            <h2 className="text-2xl font-bold heading-primary mb-4 text-center">Our Promises</h2>
-            <ul className="space-y-4">
-              <li>
-                <p className="heading-primary font-semibold">Quality First</p>
-                <p className="text-gray-700">We deliver durable, high-standard workmanship on every project, big or small.</p>
-              </li>
-              <li>
-                <p className="heading-primary font-semibold">On-Time Delivery</p>
-                <p className="text-gray-700">We respect your time and strive to meet all project deadlines without compromising quality.</p>
-              </li>
-              <li>
-                <p className="heading-primary font-semibold">Transparent Communication</p>
-                <p className="text-gray-700">We keep our clients informed at every stage, building trust through honesty and clarity.</p>
-              </li>
-              <li>
-                <p className="heading-primary font-semibold">Client Satisfaction</p>
-                <p className="text-gray-700">We&apos;re not done until you&apos;re satisfied — your vision is our priority.</p>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Our Values */}
-          <div className="flex flex-col">
-            <h2 className="text-2xl font-bold heading-primary mb-4 text-center">Our Values</h2>
-            <p className="text-gray-700 text-center mb-6">
-              To deliver high-quality, innovative, and sustainable construction solutions that meet the needs of our clients while upholding the highest standards of integrity, professionalism, and reliability in every project we undertake, big and small.
+            <h1 className="text-[#073379] text-2xl font-bold mb-3">From Concept to Completion</h1>
+            <p className="text-sm text-gray-700 max-w-xl mx-auto">
+              From residential homes and commercial spaces to intricate renovations and custom builds,
+              we deliver exceptional results that meet and exceed our clients' expectations.
             </p>
-            <div className="relative h-64 rounded-lg overflow-hidden">
-              <Image
-                src="/assets/helmet.jpg"
-                alt="Construction Helmet"
-                fill
-                className="object-cover"
-              />
+          </div>
+        </section>
+        
+        {/* Services Showcase */}
+        <section className="w-full py-8 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-[#073379] text-xl font-bold text-center mb-8">High quality exterior and superstructure work.</h2>
+            <hr className="border-gray-300 mb-8" />
+            
+            {/* Exoskeletons Section */}
+            <div className="flex flex-col md:flex-row items-center mb-12">
+              <div className="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                <Image
+                  src="/assets/helmet.jpg"
+                  alt="Exterior Construction"
+                  width={500}
+                  height={350}
+                  className="rounded-lg w-full object-cover h-[250px]"
+                />
+              </div>
+              <div className="md:w-1/2 flex flex-col items-center md:items-start">
+                <h3 className="text-[#073379] text-lg font-bold mb-2">Exceptional exoskeletons</h3>
+                <p className="text-purple-600 text-sm mb-4">
+                  High-quality superstructure work and exterior plaster work.
+                </p>
+              </div>
+            </div>
+            
+            {/* Interior Work Section */}
+            <div className="flex flex-col md:flex-row-reverse items-center">
+              <div className="md:w-1/2 mb-6 md:mb-0 md:pl-6">
+                <Image
+                  src="/assets/work done.jpg"
+                  alt="Interior Work"
+                  width={500}
+                  height={350}
+                  className="rounded-lg w-full object-cover h-[250px]"
+                />
+              </div>
+              <div className="md:w-1/2 flex flex-col items-center md:items-end">
+                <h3 className="text-[#073379] text-lg font-bold mb-2">Excellent Interior work</h3>
+                <p className="text-purple-600 text-sm mb-4">
+                  High integrity builds and interior work towards completion
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* CTA Section */}
-      <section className="w-full py-12 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <Link href="/contact" className="btn-primary">
-            Get a Quote
-          </Link>
-          <p className="mt-4 text-gray-600">
-            Request a quote on any prospective projects
-          </p>
-        </div>
-      </section>
+        </section>
+        
+        {/* Renovation Projects Section */}
+        <section className="w-full py-8 px-4 bg-gray-100">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-[#073379] text-xl font-bold text-center mb-10">Some of our renovation projects and their results.</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+                <Image
+                  src="/assets/helmet.jpg"
+                  alt="Kitchen Renovation"
+                  width={400}
+                  height={300}
+                  className="w-full object-cover h-[200px]"
+                />
+              </div>
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+                <Image
+                  src="/assets/work done.jpg"
+                  alt="Living Room Renovation"
+                  width={400}
+                  height={300}
+                  className="w-full object-cover h-[200px]"
+                />
+              </div>
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+                <Image
+                  src="/assets/constructionrig.jpg"
+                  alt="Bathroom Renovation"
+                  width={400}
+                  height={300}
+                  className="w-full object-cover h-[200px]"
+                />
+              </div>
+            </div>
+            
+            <div className="text-center mt-10">
+              <Link href="/contact" className="bg-[#073379] text-white px-6 py-2 rounded-md font-medium hover:bg-blue-800 transition duration-300">
+                Request a Quote
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
       
       {/* Footer */}
       <footer className="w-full py-8 px-8 bg-[#073379] text-white mt-auto">
