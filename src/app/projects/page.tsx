@@ -99,7 +99,92 @@ export default function Page() {
           </div>
         </section>
         
-                {/* Renovation Projects Section */}        <section className="w-full py-6 md:py-8 px-4 bg-gray-100">          <div className="max-w-6xl mx-auto">            <h2 className="text-[#073379] text-lg md:text-xl font-bold text-center mb-6 md:mb-10">Some of our renovation projects and their results.</h2>                        <div className="flex flex-wrap justify-center gap-3 md:gap-5 mb-6 md:mb-8">              {/* Before - Left Side */}              <div className="relative w-[250px] md:w-[280px]">                <Image                  src="/assets/before.jpg"                  alt="Kitchen Renovation Before"                  width={280}                  height={240}                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"                />                <p className="text-[#073379] font-medium text-center mt-2">Before...</p>              </div>                            {/* Center Image (Larger) */}              <div className="w-[270px] md:w-[300px]">                <Image                  src="/assets/after.jpg"                  alt="Kitchen Renovation Progress"                  width={300}                  height={260}                  className="rounded-lg shadow-sm object-cover h-[220px] md:h-[260px]"                />              </div>                            {/* After - Right Side */}              <div className="relative w-[250px] md:w-[280px]">                <Image                  src="/assets/after2.jpg"                  alt="Kitchen Renovation After"                  width={280}                  height={240}                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"                />                <p className="text-[#073379] font-medium text-center mt-2">After...</p>              </div>            </div>                        {/* Second Row of Interior Work */}            <div className="flex flex-wrap justify-center gap-3 md:gap-5 mb-6 md:mb-8">              {/* Left Side */}              <div className="w-[250px] md:w-[280px]">                <Image                  src="/assets/insidework1.jpg"                  alt="Interior Renovation"                  width={280}                   height={240}                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"                />              </div>                            {/* Center Image (Larger) */}              <div className="w-[270px] md:w-[300px]">                <Image                  src="/assets/insidework3.jpg"                  alt="Interior Renovation with Green Curtain"                  width={300}                  height={260}                  className="rounded-lg shadow-sm object-cover h-[220px] md:h-[260px]"                />                <p className="text-purple-600 font-medium text-center mt-2">The Gift that keeps on giving...</p>              </div>                            {/* Right Side */}              <div className="w-[250px] md:w-[280px]">                <Image                  src="/assets/insidework2.jpg"                  alt="Interior Renovation"                  width={280}                  height={240}                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"                />              </div>            </div>                        <div className="text-center mt-8 md:mt-12">              <Link href="/contact" className="bg-[#073379] text-white px-6 py-2 rounded-md font-medium hover:bg-blue-800 transition duration-300">                Request a Quote              </Link>            </div>          </div>        </section>
+        {/* Renovation Projects Section */}
+        <section className="w-full py-6 md:py-8 px-4 bg-gray-100">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-[#073379] text-lg md:text-xl font-bold text-center mb-6 md:mb-10">Some of our renovation projects and their results.</h2>
+            
+            <div className="flex flex-wrap justify-center gap-3 md:gap-5 mb-6 md:mb-8">
+              {/* Before - Left Side */}
+              <div className="relative w-[250px] md:w-[280px]">
+                <Image
+                  src="/assets/before.jpg"
+                  alt="Kitchen Renovation Before"
+                  width={280}
+                  height={240}
+                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"
+                />
+                <p className="text-[#073379] font-medium text-center mt-2">Before...</p>
+              </div>
+              
+              {/* Center Image (Larger) */}
+              <div className="w-[270px] md:w-[300px]">
+                <Image
+                  src="/assets/after.jpg"
+                  alt="Kitchen Renovation Progress"
+                  width={300}
+                  height={260}
+                  className="rounded-lg shadow-sm object-cover h-[220px] md:h-[260px]"
+                />
+              </div>
+              
+              {/* After - Right Side */}
+              <div className="relative w-[250px] md:w-[280px]">
+                <Image
+                  src="/assets/after2.jpg"
+                  alt="Kitchen Renovation After"
+                  width={280}
+                  height={240}
+                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"
+                />
+                <p className="text-[#073379] font-medium text-center mt-2">After...</p>
+              </div>
+            </div>
+            
+            {/* Second Row of Interior Work */}
+            <div className="flex flex-wrap justify-center gap-3 md:gap-5 mb-6 md:mb-8">
+              {/* Left Side */}
+              <div className="w-[250px] md:w-[280px]">
+                <Image
+                  src="/assets/insidework1.jpg"
+                  alt="Interior Renovation"
+                  width={280} 
+                  height={240}
+                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"
+                />
+              </div>
+              
+              {/* Center Image (Larger) */}
+              <div className="w-[270px] md:w-[300px]">
+                <Image
+                  src="/assets/insidework3.jpg"
+                  alt="Interior Renovation with Green Curtain"
+                  width={300}
+                  height={260}
+                  className="rounded-lg shadow-sm object-cover h-[220px] md:h-[260px]"
+                />
+                <p className="text-purple-600 font-medium text-center mt-2">The Gift that keeps on giving...</p>
+              </div>
+              
+              {/* Right Side */}
+              <div className="w-[250px] md:w-[280px]">
+                <Image
+                  src="/assets/insidework2.jpg"
+                  alt="Interior Renovation"
+                  width={280}
+                  height={240}
+                  className="rounded-lg shadow-sm object-cover h-[200px] md:h-[240px]"
+                />
+              </div>
+            </div>
+            
+            <div className="text-center mt-8 md:mt-12">
+              <Link href="/contact" className="bg-[#073379] text-white px-6 py-2 rounded-md font-medium hover:bg-blue-800 transition duration-300">
+                Request a Quote
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       
       {/* Footer */}
